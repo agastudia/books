@@ -1,30 +1,17 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3 col-md-3">
+      <div class="well">
+        <h2 class="text-muted"><%= @book.title %></h2>
+        <p id="notice"><%= notice %></p>
+        <p><span class="label label-default"><%= @book.author %></span></p>
+        <ul>
+          <li><b>Przeczytana:</b> <%= @book.readDate %></li>
+          <li><b>Ocena:</b> <%= @book.rate %></li>
+        </ul> 
+      <p><%= @book.description %></p>
+      </div>
+    </div>
+  </div>
+</div>
 
-<p>
-  <b>Title:</b>
-  <%= @book.title %>
-</p>
-
-<p>
-  <b>Author:</b>
-  <%= @book.author %>
-</p>
-
-<p>
-  <b>Readdate:</b>
-  <%= @book.readDate %>
-</p>
-
-<p>
-  <b>Rate:</b>
-  <%= @book.rate %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @book.description %>
-</p>
-
-
-<%= link_to 'Edit', edit_book_path(@book) %> |
-<%= link_to 'Back', books_path %>
